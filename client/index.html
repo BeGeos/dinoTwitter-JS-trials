@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dino Roarer</title>
+  </head>
+  <body>
+    <header>
+      <h1>Dynoerrr - Twitter for dinosaurus 🦕</h1>
+    </header>
+    <div class="dinosaurus" id="brachio"><img src="./images/Brachio.svg" alt="brachiosaurus"></div>
+    <div class="dinosaurus" id="triceps"><img src="./images/Triceps.svg" alt="triceratops"></div>
+    <div class="dinosaurus" id="stego"><img src="./images/Stego.svg" alt="stegosaurus"></div>
+    <div class="dinosaurus" id="t-rex"><img src="./images/T-rex.svg" alt="tyrannosaurus rex"></div>
+    <main>
+      <div id="load-overlay">
+        <img src="./images/loading.gif" alt="loading spinner">
+      </div>
+      <form class="roar__form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" maxlength="30" required/>
+        <label for="roar">Roar:</label>
+        <textarea
+          name="content"
+          class="normal"
+          id="content"
+          cols="30"
+          rows="10"
+          maxlength="140"
+          required
+        ></textarea>
+        <button>Send 🦖</button>
+      </form>
+      <div class="roar__navigation">
+        <button id="all-roars-btn">All</button>
+        <form class="search-bar">
+          <input id="tags" type="text" placeholder="Hastag or by author with @">
+          <!-- <button>Search</button> -->
+        </form>
+      </div>
+      <div class="active-tags">
+        <!-- <div class="active-tag" id="First"><small>First</small><span dataset="First" class="close-tag">&times;</span></div>
+        <div class="active-tag"><small>Second</small><span>&times;</span></div>
+        <div class="active-tag"><small>Third</small><span>&times;</span></div> -->
+      </div>
+      <div class="roar__container">
+        </div>
+      </div>
+    </main>
+    <script src="client.js"></script>
+  </body>
+</html>
